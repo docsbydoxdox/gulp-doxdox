@@ -1,0 +1,42 @@
+{
+  "name": "gulp-doxdox",
+  "version": "0.0.1",
+  "description": "Provides Doxdox support for gulp",
+  "keywords": [
+    "gulpplugin"
+  ],
+  "author": {
+    "name": "Ian Macalinao",
+    "email": "me@ian.pw",
+    "url": "https://github.com/simplyianm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/simplyianm/gulp-doxdox"
+  },
+  "scripts": {
+    "test": "istanbul test _mocha --report html -- test/*.js --reporter spec",
+    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+  },
+  "dependencies": {
+    "doxdox": "0.0.7",
+    "gulp-util": "^2.2.20"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "coveralls": "*",
+    "mocha-lcov-reporter": "*",
+    "istanbul": "*",
+    "event-stream": "*",
+    "should": "~2.1.0"
+  },
+  "engines": {
+    "node": ">=0.8.0",
+    "npm": ">=1.2.10"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simplyianm/gulp-doxdox/issues"
+  },
+  "homepage": "https://github.com/simplyianm/gulp-doxdox"
+}
