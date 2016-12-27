@@ -32,8 +32,8 @@
     "should": "11.1.2"
   },
   "engines": {
-    "node": ">=0.8.0",
-    "npm": ">=1.2.10"
+    "node": ">=4.0",
+    "npm": ">=3"
   },
   "license": "MIT",
   "bugs": {
