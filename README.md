@@ -41,13 +41,13 @@ The message you wish to attach to file.
 [doxdox]: https://github.com/neogeek/doxdox/
 
 [npm-url]: https://npmjs.org/package/gulp-doxdox
-[npm-image]: https://badge.fury.io/js/gulp-doxdox.png
+[npm-image]: http://img.shields.io/npm/v/gulp-doxdox.svg?style=flat
 
 [travis-url]: http://travis-ci.org/simplyianm/gulp-doxdox
-[travis-image]: https://secure.travis-ci.org/simplyianm/gulp-doxdox.png?branch=master
+[travis-image]: https://img.shields.io/travis/simplyianm/gulp-doxdox.svg?style=flat&branch=master
 
 [coveralls-url]: https://coveralls.io/r/simplyianm/gulp-doxdox
-[coveralls-image]: https://coveralls.io/repos/simplyianm/gulp-doxdox/badge.png
+[coveralls-image]: https://img.shields.io/coveralls/simplyianm/gulp-doxdox.svg?style=flat
 
 [depstat-url]: https://david-dm.org/simplyianm/gulp-doxdox
-[depstat-image]: https://david-dm.org/simplyianm/gulp-doxdox.png
+[depstat-image]: https://david-dm.org/simplyianm/gulp-doxdox.svg
