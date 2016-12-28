@@ -16,23 +16,36 @@ Then, add it to your `gulpfile.js`:
 ```javascript
 var doxdox = require("gulp-doxdox");
 
-gulp.src("./src/*.ext")
-	.pipe(doxdox({
-		msg: "Hello Gulp!"
-	}))
-	.pipe(gulp.dest("./dist"));
+gulp.src("./src/**/*.js")
+  .pipe(doxdox({
+    "title": "Untitled Project",
+    "layout": "markdown"
+  }))
+  .pipe(rename("documentation.md"))
+  .pipe(gulp.dest("./dist"));
 ```
 
 ## API
 
 ### doxdox(options)
 
-#### options.msg
+#### options.layout
 Type: `String`  
-Default: `Hello World`
+Default: `"markdown"`
 
-The message you wish to attach to file.
+Layout to render the documentation with.
 
+- Markdown
+- Bootstrap
+- Custom Handlebars template file (template.hbs)
+
+#### options.description
+Type: `String`  
+Default: `""`
+
+#### options.title
+Type: `String`  
+Default: `"Untitled Project"`
 
 ## License
 
