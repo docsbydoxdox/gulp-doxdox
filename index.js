@@ -1,12 +1,12 @@
-'use strict';
+"use strict";
 
-const through = require('through2');
-const PluginError = require('plugin-error');
-const File = require('vinyl');
+const through = require("through2");
+const PluginError = require("plugin-error");
+const File = require("vinyl");
 
-const doxdox = require('doxdox');
+const doxdox = require("doxdox");
 
-const PLUGIN_NAME = 'gulp-doxdox';
+const PLUGIN_NAME = "gulp-doxdox";
 
 module.exports = function (config) {
 
@@ -22,7 +22,7 @@ module.exports = function (config) {
 
     } else if (file.isStream()) {
 
-      this.emit('error', new PluginError(PLUGIN_NAME, 'Streams not supported!'));
+      this.emit("error", new PluginError(PLUGIN_NAME, "Streams not supported!"));
 
     } else if (file.isBuffer()) {
 
@@ -35,15 +35,15 @@ module.exports = function (config) {
   }, function (callback) {
 
     doxdox.parseInputs(files, {
-      'description': config.description || '',
-      'ignore': (config.ignore || '').split(/\s*,\s*/),
-      'layout': (config.layout || 'markdown').toLowerCase(),
-      'parser': (config.parser || 'dox').toLowerCase(),
-      'title': config.title || 'Untitled Project'
+      "description": config.description || "",
+      "ignore": (config.ignore || "").split(/\s*,\s*/),
+      "layout": (config.layout || "markdown").toLowerCase(),
+      "parser": (config.parser || "dox").toLowerCase(),
+      "title": config.title || "Untitled Project"
     }).then(function (content) {
 
       this.push(new File({
-        path: 'docs.md',
+        path: "docs.md",
         contents: new Buffer(content)
       }));
 

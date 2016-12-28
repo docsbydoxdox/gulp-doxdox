@@ -1,37 +1,37 @@
 /*global describe, it*/
 
-'use strict';
+"use strict";
 
-const fs = require('fs');
-const es = require('event-stream');
-const should = require('should');
+const fs = require("fs");
+const es = require("event-stream");
+const should = require("should");
 
-const File = require('vinyl');
+const File = require("vinyl");
 
-const doxdox = require('../../');
+const doxdox = require("../../");
 
-describe('gulp-doxdox', function () {
+describe("gulp-doxdox", function () {
 
   const expectedFile = new File({
-    path: 'test/fixtures/lodash.html',
-    contents: fs.readFileSync('test/fixtures/lodash.html')
+    path: "test/fixtures/lodash.html",
+    contents: fs.readFileSync("test/fixtures/lodash.html")
   });
 
-  it('should produce expected file via buffer', function (done) {
+  it("should produce expected file via buffer", function (done) {
 
     const srcFile = new File({
-      path: 'test/fixtures/lodash.js',
-      contents: fs.readFileSync('test/fixtures/lodash.js')
+      path: "test/fixtures/lodash.js",
+      contents: fs.readFileSync("test/fixtures/lodash.js")
     });
 
     const stream = doxdox();
 
-    stream.on('error', function (err) {
+    stream.on("error", function (err) {
       should.exist(err);
       done(err);
     });
 
-    stream.on('data', function (newFile) {
+    stream.on("data", function (newFile) {
 
       should.exist(newFile);
       should.exist(newFile.contents);
@@ -48,21 +48,21 @@ describe('gulp-doxdox', function () {
 
   });
 
-  it('should error on stream', function (done) {
+  it("should error on stream", function (done) {
 
     const srcFile = new File({
-      path: 'test/fixtures/lodash.js',
-      contents: fs.createReadStream('test/fixtures/lodash.js')
+      path: "test/fixtures/lodash.js",
+      contents: fs.createReadStream("test/fixtures/lodash.js")
     });
 
     const stream = doxdox();
 
-    stream.on('error', function (err) {
+    stream.on("error", function (err) {
       should.exist(err);
       done();
     });
 
-    stream.on('data', function (newFile) {
+    stream.on("data", function (newFile) {
       newFile.contents.pipe(es.wait(function (err, data) {
         done(err);
       }));
