@@ -1,7 +1,8 @@
 # gulp-doxdox
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]  [![Coverage Status][coveralls-image]][coveralls-url] [![Dependency Status][depstat-image]][depstat-url]
 
 > [doxdox][doxdox] plugin for [gulp](https://github.com/wearefractal/gulp)
+
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]  [![Coverage Status][coveralls-image]][coveralls-url] [![Dependency Status][depstat-image]][depstat-url]
 
 ## Usage
 
@@ -35,9 +36,9 @@ Default: `"markdown"`
 
 Layout to render the documentation with.
 
-- Markdown
-- Bootstrap
-- Custom Handlebars template file (template.hbs)
+- `"Markdown"``
+- `"Bootstrap"``
+- Custom Handlebars template file (`"template.hbs"`)
 
 #### options.description
 Type: `String`  
