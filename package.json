@@ -15,20 +15,21 @@
     "url": "git://github.com/simplyianm/gulp-doxdox"
   },
   "scripts": {
-    "test": "istanbul test _mocha --report html -- test/*.js --reporter spec",
+    "test": "istanbul test _mocha --report html -- 'test/specs/**/*.js' --reporter spec",
     "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "dependencies": {
     "doxdox": "2.0.1",
-    "gulp-util": "3.0.8",
-    "through2": "2.0.3"
+    "plugin-error": "0.1.2",
+    "through2": "2.0.3",
+    "vinyl": "2.0.1"
   },
   "devDependencies": {
-    "mocha": "3.2.0",
     "coveralls": "2.11.15",
-    "mocha-lcov-reporter": "1.2.0",
-    "istanbul": "0.4.5",
     "event-stream": "3.3.4",
+    "istanbul": "0.4.5",
+    "mocha": "3.2.0",
+    "mocha-lcov-reporter": "1.2.0",
     "should": "11.1.2"
   },
   "engines": {
