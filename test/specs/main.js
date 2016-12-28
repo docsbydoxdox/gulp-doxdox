@@ -12,12 +12,12 @@ const doxdox = require("../../");
 
 describe("gulp-doxdox", function () {
 
-  const expectedFile = new File({
-    path: "test/fixtures/lodash.html",
-    contents: fs.readFileSync("test/fixtures/lodash.html")
-  });
-
   it("should produce expected file via buffer", function (done) {
+
+    const expectedFile = new File({
+      path: "test/fixtures/lodash.html",
+      contents: fs.readFileSync("test/fixtures/lodash.html")
+    });
 
     const srcFile = new File({
       path: "test/fixtures/lodash.js",
@@ -27,7 +27,6 @@ describe("gulp-doxdox", function () {
     const stream = doxdox();
 
     stream.on("error", function (err) {
-      should.exist(err);
       done(err);
     });
 
@@ -58,7 +57,6 @@ describe("gulp-doxdox", function () {
     const stream = doxdox();
 
     stream.on("error", function (err) {
-      should.exist(err);
       done();
     });
 
