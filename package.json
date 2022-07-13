@@ -19,7 +19,7 @@
     "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "dependencies": {
-    "doxdox": "2.0.1",
+    "doxdox": "2.0.2",
     "plugin-error": "0.1.2",
     "through2": "2.0.3",
     "vinyl": "2.0.1"
